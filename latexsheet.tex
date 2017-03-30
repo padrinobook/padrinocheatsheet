@@ -106,10 +106,24 @@
 \subsection{Project}
 \texttt{padrino generate project NAME}
 \begin{itemize}
-  \item \texttt{-t} / \texttt{--tiny}} \\
+  \item \texttt{-t} / \texttt{--tiny} \\
     creates controllers.rb, helpers.rb, mailers.rb instead of directories for them
   \item \texttt{-b} / \texttt{--bundle}} \\
     will install the gems automatically
+  \item \texttt{-d} / \texttt{--orm} \\
+    define the object-relational mapper. Options: 'activerecord', 'couchrest',
+    'datamapper', 'dynamoid', 'minirecord', 'mongoid', 'mongomapper', 'mongomatic', 'ohm', 'ripple',
+    'sequel', 'none'
+  \item \texttt{-t} / \texttt{--test} \\
+    define testing framework. Options: 'bacon', 'cucumber', 'minitest', 'rspec', 'testunit', 'none'
+  \item \texttt{-s} / \texttt{--script} \\
+    define the JavaScript library. Options: 'dojo', 'extcore', 'jquery', 'mootools', 'prototype', 'none'
+  \item \texttt{-e} / \texttt{--renderer} \\
+    define the rendering engine. Options: 'erb', 'haml', 'liquid', 'slim', 'none'
+  \item \texttt{-a} / \texttt{--adapter} \\
+    specify the database configuration for config/database.rb file . Options: 'sqlite', 'mysql',
+    'mysql2', 'mysql-gem', 'postgres'.
+    It only works if the -d option for the object-relational mapper is given.
 \end{itemize}
 
 
