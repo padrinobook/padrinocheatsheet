@@ -127,6 +127,33 @@
 \end{itemize}
 
 
+\subsection{Controller}
+\texttt{padrino generate controller NAME}
+\begin{itemize}
+  \item  \\
+    Creates: app/controllers/name.rb, app/views/name, app/helpers/name\_helper.rb
+  \item \texttt{-d} / \texttt{--destroy} \\
+    remove all generated files for the given controller
+  \item \texttt{-l} / \texttt{--layout} \\
+    defines the layout for the controller
+  \item \texttt{-n} / \texttt{--namespace} \\
+    defines the namespace for the new controller
+  \item \texttt{--no-helper} \\
+    no helper will be created
+  \item \texttt{-p} / \texttt{--parent} \\
+    defines the parent for the new controller
+  \item \texttt{-r} / \texttt{--root} \\
+    defines the root destination for the padrino application in which the controller should be
+    created; config/boots.rb needs to be there in the given padrino application
+  \item \texttt{--fields} \\
+    defines the fields of the controller; eg. \texttt{padrino generate controller user get:user post:user put:page}
+  \item \texttt{-a} / \texttt{--app} \\
+    defines the application destination path for the controller (default is /app); eg. \texttt{padrino generate controller app -a test/app}
+  \item \texttt{-f} / \texttt{--provides} \\
+    define the default return formats for the controller
+\end{itemize}
+
+
 \section{Start}
 \begin{tabular}{@{}ll@{}}
 \verb!padrino start! & run the padrino app\\
